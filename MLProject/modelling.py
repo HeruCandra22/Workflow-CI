@@ -42,6 +42,6 @@ with mlflow.start_run():
     mlflow.log_param("max_depth", args.max_depth)
     mlflow.log_metric("accuracy", acc)
 
-    mlflow.sklearn.log_model(model, name="model")
+    mlflow.sklearn.log_model(model, artifact_path="model")
 
     print(f"Training selesai. Accuracy = {acc:.4f}")
